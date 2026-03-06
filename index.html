@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Happy Birthday!</title>
+    <title>Happy Birthday BEBEEEE!</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #fff5f5;
+            background: #fcc1c1e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
@@ -37,11 +37,8 @@
             padding: 10px 10px 25px 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             border-radius: 2px;
-            opacity: 1;
-            transition: opacity 0.5s;
+            opacity: 0.7;
         }
-
-        .polaroid:hover { opacity: 0.9; }
 
         .polaroid img {
             display: block;
@@ -50,12 +47,24 @@
             border: 1px solid #ddd;
         }
 
-        #pol1 { width: 150px; top: 10vh; left: 5vw; transform: rotate(-10deg); }
-        #pol2 { width: 180px; top: 15vh; right: 8vw; transform: rotate(15deg); }
-        #pol3 { width: 140px; top: 40vh; left: 10vw; transform: rotate(8deg); }
-        #pol4 { width: 170px; top: 55vh; right: 5vw; transform: rotate(-12deg); }
-        #pol5 { width: 160px; top: 75vh; left: 15vw; transform: rotate(5deg); }
-        #pol6 { width: 190px; top: 85vh; right: 12vw; transform: rotate(-18deg); }
+        #pol1 { width: 150px; top: 5vh; left: 5vw; transform: rotate(-10deg); }
+        #pol2 { width: 180px; top: 10vh; right: 5vw; transform: rotate(15deg); }
+        #pol3 { width: 140px; top: 35vh; left: 8vw; transform: rotate(8deg); }
+        #pol4 { width: 170px; top: 45vh; right: 3vw; transform: rotate(-12deg); }
+        #pol5 { width: 160px; top: 65vh; left: 12vw; transform: rotate(5deg); }
+        #pol6 { width: 190px; top: 75vh; right: 10vw; transform: rotate(-18deg); }
+        #pol7 { width: 155px; top: 95vh; left: 4vw; transform: rotate(12deg); }
+        #pol8 { width: 175px; top: 120vh; right: 6vw; transform: rotate(-8deg); }
+        #pol9 { width: 145px; top: 150vh; left: 7vw; transform: rotate(-15deg); }
+        #pol10 { width: 165px; top: 175vh; right: 4vw; transform: rotate(10deg); }
+        #pol11 { width: 150px; top: 200vh; left: 5vw; transform: rotate(-12deg); }
+        #pol12 { width: 180px; top: 220vh; right: 8vw; transform: rotate(14deg); }
+        #pol13 { width: 160px; top: 240vh; left: 10vw; transform: rotate(6deg); }
+        #pol14 { width: 170px; top: 260vh; right: 5vw; transform: rotate(-9deg); }
+        #pol15 { width: 155px; top: 280vh; left: 3vw; transform: rotate(11deg); }
+        #pol16 { width: 185px; top: 300vh; right: 7vw; transform: rotate(-13deg); }
+        #pol17 { width: 140px; top: 320vh; left: 8vw; transform: rotate(7deg); }
+        #pol18 { width: 175px; top: 340vh; right: 4vw; transform: rotate(-16deg); }
 
         .container {
             margin-top: 8vh;
@@ -69,8 +78,8 @@
             position: relative;
         }
 
-        h1 { color: #ff4d6d; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
-        p { color: #555; font-size: 1.1rem; padding: 0 10px; }
+        h1 { color: #ff4d6d; font-size: clamp(2rem, 5vw, 3rem); }
+        p { color: #555; font-size: 1.1rem; }
 
         .btn {
             background: #ff4d6d;
@@ -79,14 +88,13 @@
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
             animation: pulse 2s infinite;
-            transition: transform 0.2s;
             margin: 20px 0;
-            position: relative;
             z-index: 15;
+            position: relative;
         }
 
         @keyframes pulse {
@@ -95,15 +103,13 @@
             100% { transform: scale(1); }
         }
 
-        .btn:active { transform: scale(0.95); }
-
-        #photo-dropdown, #video-section {
+        .reveal-section {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+            transition: max-height 1.2s ease-in-out, opacity 0.8s ease;
             opacity: 0;
             width: 90%;
-            max-width: 900px;
+            max-width: 850px;
             background: white;
             border-radius: 25px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.05);
@@ -112,34 +118,38 @@
             z-index: 10;
         }
 
-        #photo-dropdown.show, #video-section.show {
+        .reveal-section.show {
             max-height: 5000px;
             opacity: 1;
-            padding: 25px 15px;
+            padding: 30px 15px;
             margin-bottom: 30px;
         }
 
+        .memory-polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .memory-polaroid img { width: 100%; border-radius: 5px; }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             padding: 15px;
         }
 
         .gallery img {
             width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        video {
-            width: 100%;
-            max-width: 700px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
+        video { width: 100%; max-width: 600px; border-radius: 15px; }
 
         .heart {
             position: fixed;
@@ -152,80 +162,109 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-110vh); opacity: 0; }
         }
 
         @media (max-width: 768px) {
-            .container { width: 90%; padding: 20px; }
-            h1 { font-size: 1.8rem; }
+            .polaroid { width: 100px !important; opacity: 0.4; }
             .gallery { grid-template-columns: 1fr; }
-            .polaroid { width: 100px !important; opacity: 0.4; } 
         }
     </style>
 </head>
 <body>
 
+    <audio id="bgMusic" loop>
+        <source src="wishlist.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="background-polaroids">
-        <div class="polaroid" id="pol1"><img src="pretty.jpg" alt="Solo 1"></div>
-        <div class="polaroid" id="pol2"><img src="pretty2.jpg" alt="Solo 2"></div>
-        <div class="polaroid" id="pol3"><img src="pretty3.jpg" alt="Solo 3"></div>
-        <div class="polaroid" id="pol4"><img src="pretty4.jpg" alt="Solo 4"></div>
-        <div class="polaroid" id="pol5"><img src="pretty5.jpg" alt="Solo 5"></div>
-        <div class="polaroid" id="pol6"><img src="pretty6.jpg" alt="Solo 6"></div>
+        <div class="polaroid" id="pol1"><img src="pretty.jpg"></div>
+        <div class="polaroid" id="pol2"><img src="pretty2.jpg"></div>
+        <div class="polaroid" id="pol3"><img src="pretty3.jpg"></div>
+        <div class="polaroid" id="pol4"><img src="pretty4.jpg"></div>
+        <div class="polaroid" id="pol5"><img src="pretty5.jpg"></div>
+        <div class="polaroid" id="pol6"><img src="pretty6.jpg"></div>
+        <div class="polaroid" id="pol7"><img src="pretty7.jpg"></div>
+        <div class="polaroid" id="pol8"><img src="pretty8.jpg"></div>
+        <div class="polaroid" id="pol9"><img src="pretty9.jpg"></div>
+        <div class="polaroid" id="pol10"><img src="pretty10.jpg"></div>
+        <div class="polaroid" id="pol11"><img src="pretty11.jpg"></div>
+        <div class="polaroid" id="pol12"><img src="pretty12.jpg"></div>
+        <div class="polaroid" id="pol13"><img src="pretty13.jpg"></div>
+        <div class="polaroid" id="pol14"><img src="pretty14.jpg"></div>
+        <div class="polaroid" id="pol15"><img src="pretty15.jpg"></div>
+        <div class="polaroid" id="pol16"><img src="pretty16.jpg"></div>
+        <div class="polaroid" id="pol17"><img src="pretty17.jpg"></div>
+        <div class="polaroid" id="pol18"><img src="pretty18.jpg"></div>
     </div>
 
     <div class="container">
         <h1>Happy Birthday, Bebe Ji Ho! 🥰</h1>
-        <p>Sobrang napapagaan mo ang aking loob tuwing magkasama tayo.</p>
-        <button class="btn" onclick="revealSurprise()">Click for a Surprise</button>
-        <p id="secret-note" style="display:none; margin-top: 25px; font-style: italic; color: #ff4d6d; font-weight: bold;">
-            "HAPPY BIRTHDAY BEBE, I LOVE YOU SO MUCH, HERE ARE SOME OF MY FAVE PICTURES OF OURS"
-        </p>
+        <p>Thank you so much for letting me experience your love. I am so grateful and thankful for your existence. I love you very much bebe!</p>
+        <button class="btn" onclick="startSurprise()">Click mo to kung love mo ko :D</button>
     </div>
 
-    <div id="photo-dropdown">
-        <h2 style="color: #ff4d6d; font-family: 'Georgia', serif;">SOME OF OUR BEST MOMENTS ❤️</h2>
+    <div id="first-meet-section" class="reveal-section">
+        <h2 style="color: #ff4d6d;">Our First Meetup (kabado betlog)</h2>
+        <div class="memory-polaroid"><img src="first_meet.jpg"></div>
+        <p style="font-style: italic; color: #555;">"Sobrang ganda amp unang pagkakita ko sakanya ang lala eh. We went to the banchetto near Marikina valley, although wala tayong kinain. Atleast naexperience nating maipit sa sobrang daming tao anlala. Kilig so much si tanga (ako) nung hinawakan mo kamay ko na para bang ginawa akong bata na mawawala HWAHHAWHAWHAW. Cafe Lidia moment nagpasikat pako na bumili ng nachos ayan di naman naubos HAHAHAHAH. Tas nag riverbanks and yapped all night 🥰"</p>
+        <button class="btn" onclick="revealSection('fave-gala-section')">CLICK HEREEEE MWEHHEHEE</button>
+    </div>
+
+    <div id="fave-gala-section" class="reveal-section">
+        <h2 style="color: #ff4d6d;">Our Most Memorable (As of Right Now) Gala Together</h2>
+        <div class="memory-polaroid"><img src="fave_gala.jpg"></div>
+        <p style="font-style: italic; color: #555;">"20K+ steps... what the heck bebe, one of the most memorable gala naten together. Kung san san napunta from national museum, nag intramuros, nag Pasig esplanade, and nag Chinatown. Para lang matest na yung bagong dating na cam mo, and it was worth every step na ginawa naten. Kung san san napadpad pero ang SAYA. Hindi ramdam ang pagod kapag kasama KA "</p>
+        <button class="btn" onclick="revealSection('wholesome-section')">Click mo ulit to kung love mo ko talaga 🥰</button>
+    </div>
+
+    <div id="wholesome-section" class="reveal-section">
+        <h2 style="color: #ff4d6d;">Most Wholesome Moment na we've spent together </h2>
+        <div class="memory-polaroid"><img src="wholesome.jpg"></div>
+        <p style="font-style: italic; color: #555;">"This day was just memorable for me, sobrang simple niya. We we're just sitted on the grass while listening to the performers sa sports center. Kahit nakaupo lang tayo, enjoying what's happening in front of us, and watching one of your favorite artist was very memorable. Parang nasa own bubble lang tayo and just enjoying the moment. Also medyo naruin ko kasi kanta ako nang kanta HWAHWAHWAHA na dapat sasagutin mo na ko nung time na yon HWAHWAHWHAAWH SORRY FEEL NA FEEL KUMANTA EH"</p>
+        <button class="btn" onclick="revealSection('gallery-section')">LOVE MO BA TALAGA AKOOOOO?? CLICK MO NGAAA ULIT TOOOOOO PLEASE PLEASE PLEASE</button>
+    </div>
+
+    <div id="gallery-section" class="reveal-section">
+        <h2 style="color: #ff4d6d;">SOME OF MY FAVE PICTURES OF OURS ❤️</h2>
         <div class="gallery">
-            <img src="jichons1.jpg" alt="Memory 1">
-            <img src="jichons2.jpg" alt="Memory 2">
-            <img src="jichons3.jpg" alt="Memory 3">
-            <img src="jichons4.jpg" alt="Memory 4">
-            <img src="jichons5.jpg" alt="Memory 5">
-            <img src="jichons6.jpg" alt="Memory 6">
+            <img src="jichons1.jpg">
+            <img src="jichons2.jpg">
+            <img src="jichons3.jpg">
+            <img src="jichons4.jpg">
+            <img src="jichons5.jpg">
+            <img src="jichons6.jpg">
         </div>
-        
-        <h3 style="color: #555; margin-top: 30px;">Wait, there's more!</h3>
-        <button class="btn" onclick="revealVideo()">CLICK MO TO BILI BILI HEHEHEHEHEHEHE 🎥</button>
+        <h3 style="color: #555;">PUMILI LANG ME SA MGA PICS MO FROM YOUR CAMERA!</h3>
+        <button class="btn" onclick="revealSection('video-section')">CLICK MO TO BILI BILI HEHEHEHEHEHEHE 🎥</button>
     </div>
 
-    <div id="video-section">
-        <h2 style="color: #ff4d6d; font-family: 'Georgia', serif;">BARDAGULAN TIMEEEEEEEEE</h2>
-        <video controls>
-            <source src="friends_greeting.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div id="video-section" class="reveal-section">
+        <h2 style="color: #ff4d6d;">BARDAGULAN TIMEEEEEEEEE</h2>
+        <video id="surpriseVideo" controls><source src="friends_greeting.mp4" type="video/mp4"></video>
         <p style="margin-top: 20px; color: #888;">Mahal na mahal ka namin!</p>
     </div>
 
     <script>
-        function revealSurprise() {
-            document.getElementById('secret-note').style.display = 'block';
-            const dropdown = document.getElementById('photo-dropdown');
-            dropdown.classList.add('show');
-
-            setTimeout(() => {
-                dropdown.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 600);
+        function startSurprise() {
+            const music = document.getElementById('bgMusic');
+            music.volume = 0.2;
+            music.play().catch(e => console.log("Audio play blocked by browser"));
+            revealSection('first-meet-section');
         }
 
-        function revealVideo() {
-            const videoSec = document.getElementById('video-section');
-            videoSec.classList.add('show');
+        function revealSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.add('show');
+            
+            if(sectionId === 'video-section') {
+                document.getElementById('bgMusic').volume = 0;
+            }
 
             setTimeout(() => {
-                videoSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 600);
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500);
         }
 
         function createHeart() {
@@ -234,11 +273,9 @@
             heart.innerHTML = '❤️';
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
             document.body.appendChild(heart);
             setTimeout(() => heart.remove(), 5000);
         }
-
         setInterval(createHeart, 400);
     </script>
 </body>
