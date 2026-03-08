@@ -47,6 +47,7 @@
             border: 1px solid #ddd;
         }
 
+        /* --- Scattered Background Photos (1-26) --- */
         #pol1 { width: 150px; top: 5vh; left: 5vw; transform: rotate(-10deg); }
         #pol2 { width: 180px; top: 10vh; right: 5vw; transform: rotate(15deg); }
         #pol3 { width: 140px; top: 35vh; left: 8vw; transform: rotate(8deg); }
@@ -65,6 +66,15 @@
         #pol16 { width: 185px; top: 300vh; right: 7vw; transform: rotate(-13deg); }
         #pol17 { width: 140px; top: 320vh; left: 8vw; transform: rotate(7deg); }
         #pol18 { width: 175px; top: 340vh; right: 4vw; transform: rotate(-16deg); }
+        #pol19 { width: 150px; top: 360vh; left: 6vw; transform: rotate(10deg); }
+        #pol20 { width: 180px; top: 380vh; right: 2vw; transform: rotate(-8deg); }
+        #pol21 { width: 160px; top: 400vh; left: 4vw; transform: rotate(-12deg); }
+        #pol22 { width: 170px; top: 420vh; right: 6vw; transform: rotate(15deg); }
+        /* Extra bottom filler */
+        #pol23 { width: 155px; top: 440vh; left: 3vw; transform: rotate(-5deg); }
+        #pol24 { width: 180px; top: 460vh; right: 5vw; transform: rotate(12deg); }
+        #pol25 { width: 145px; top: 480vh; left: 7vw; transform: rotate(-18deg); }
+        #pol26 { width: 165px; top: 500vh; right: 3vw; transform: rotate(8deg); }
 
         .container {
             margin-top: 8vh;
@@ -149,8 +159,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        video { width: 100%; max-width: 600px; border-radius: 15px; }
-
         .heart {
             position: fixed;
             color: #ffb3c1;
@@ -197,6 +205,14 @@
         <div class="polaroid" id="pol16"><img src="pretty16.jpg"></div>
         <div class="polaroid" id="pol17"><img src="pretty17.jpg"></div>
         <div class="polaroid" id="pol18"><img src="pretty18.jpg"></div>
+        <div class="polaroid" id="pol19"><img src="pretty19.jpg"></div>
+        <div class="polaroid" id="pol20"><img src="pretty20.jpg"></div>
+        <div class="polaroid" id="pol21"><img src="pretty21.jpg"></div>
+        <div class="polaroid" id="pol22"><img src="pretty22.jpg"></div>
+        <div class="polaroid" id="pol23"><img src="pretty23.jpg"></div>
+        <div class="polaroid" id="pol24"><img src="pretty24.jpg"></div>
+        <div class="polaroid" id="pol25"><img src="pretty25.jpg"></div>
+        <div class="polaroid" id="pol26"><img src="pretty26.jpg"></div>
     </div>
 
     <div class="container">
@@ -220,7 +236,7 @@
     </div>
 
     <div id="wholesome-section" class="reveal-section">
-        <h2 style="color: #ff4d6d;">Most Wholesome Moment na we've spent together </h2>
+        <h2 style="color: #ff4d6d;">Most Wholesome Moment na we've spent together 💖</h2>
         <div class="memory-polaroid"><img src="wholesome.jpg"></div>
         <p style="font-style: italic; color: #555;">"This day was just memorable for me, sobrang simple niya. We we're just sitted on the grass while listening to the performers sa sports center. Kahit nakaupo lang tayo, enjoying what's happening in front of us, and watching one of your favorite artist was very memorable. Parang nasa own bubble lang tayo and just enjoying the moment. Also medyo naruin ko kasi kanta ako nang kanta HWAHWAHWAHA na dapat sasagutin mo na ko nung time na yon HWAHWAHWHAAWH SORRY FEEL NA FEEL KUMANTA EH"</p>
         <button class="btn" onclick="revealSection('gallery-section')">MORE MORE MORE</button>
@@ -244,18 +260,18 @@
     </div>
 
     <div id="video-section" class="reveal-section">
-    <h2 style="color: #ff4d6d;">BARDAGULAN TIMEEEEEEEEE</h2>
-    <div style="width: 100%; max-width: 600px; aspect-ratio: 16/9; margin: 0 auto;">
-        <iframe 
-            width="100%" 
-            height="100%" 
-            src="https://www.youtube.com/embed/e3ns5a95KLo?si=EAVZgbLQvn01uyf5"
-            title="Birthday Greeting" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen 
-            style="border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
-        </iframe>
+        <h2 style="color: #ff4d6d;">BARDAGULAN TIMEEEEEEEEE</h2>
+        <div style="width: 100%; max-width: 600px; aspect-ratio: 16/9; margin: 0 auto; padding-bottom: 20px;">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/JjgkUJYArSM?si=EaWOe7zwIN2qvd5f"
+                title="Birthday Greeting" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen 
+                style="border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+            </iframe>
         </div>
         <p style="margin-top: 20px; color: #888;">Mahal na mahal ka namin!</p>
     </div>
